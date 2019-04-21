@@ -1,9 +1,12 @@
-interface Deck {
+export interface Deck {
+  id: string;
   title: string;
 }
 
-interface Card {
+export interface Card {
+  id: string;
+  deckId: string;
   question: string;
   answer: string;
-  date: Date;
+  reviewDate: Date;
 }
