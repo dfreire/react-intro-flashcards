@@ -6,7 +6,7 @@ import { Card } from "../model";
 import { Deck } from "../model";
 
 const db = lowdb(new LocalStorage("db"));
-db.defaults({ decks: [], cards: [] }).write();
+db.defaults({ decks: [{ id: 1, title: "Deck 1" }], cards: [] }).write();
 
 const delay = <T>(result: T): Promise<T> => {
   return new Promise((resolve, reject) => {
